@@ -22,27 +22,27 @@ const Photos = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState({});
 
-  // useEffect(() => {
-  //   if (!query) return;
-  //   const fetchData = async () => {
-  //     try {
-  //       setIsLoading(true);
-  //       const res = await fetchImages(query, page);
-  //       if (!res.photos.length) {
-  //         setIsEmpty(true);
-  //         return;
-  //       }
-  //       setPhotos((prev) => [...prev, ...res.photos]);
-  //       setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
-  //     } catch (error) {
-  //       setIsError(true);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
+  useEffect(() => {
+    if (!query) return;
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        // const res = await fetchImages(query, page);
+        // if (!res.photos.length) {
+        //   setIsEmpty(true);
+        //   return;
+        // }
+        // setPhotos((prev) => [...prev, ...res.photos]);
+        // setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
+      } catch (error) {
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  //   fetchData();
-  // }, [query, page]);
+    fetchData();
+  }, [query, page]);
 
   const handleSearchSubmit = (value) => {
     setQuery(value);
