@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
   SearchPhotos,
   PhotosList,
@@ -7,12 +7,12 @@ import {
   Loader,
   Heading,
   ImageModal,
-} from "components";
-import { fetchImages } from "services/pexelsAPI";
-import css from "./Photos.module.css";
+} from 'components';
+// import { fetchImages } from "services/pexelsAPI";
+import css from './Photos.module.css';
 
 const Photos = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
   const [photos, setPhotos] = useState([]);
   const [showLoadMore, setShowLoadMore] = useState(false);
@@ -22,27 +22,27 @@ const Photos = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState({});
 
-  useEffect(() => {
-    if (!query) return;
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        const res = await fetchImages(query, page);
-        if (!res.photos.length) {
-          setIsEmpty(true);
-          return;
-        }
-        setPhotos((prev) => [...prev, ...res.photos]);
-        setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
-      } catch (error) {
-        setIsError(true);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   if (!query) return;
+  //   const fetchData = async () => {
+  //     try {
+  //       setIsLoading(true);
+  //       const res = await fetchImages(query, page);
+  //       if (!res.photos.length) {
+  //         setIsEmpty(true);
+  //         return;
+  //       }
+  //       setPhotos((prev) => [...prev, ...res.photos]);
+  //       setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
+  //     } catch (error) {
+  //       setIsError(true);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
 
-    fetchData();
-  }, [query, page]);
+  //   fetchData();
+  // }, [query, page]);
 
   const handleSearchSubmit = (value) => {
     setQuery(value);
@@ -72,7 +72,7 @@ const Photos = () => {
       <Container>
         <SearchPhotos onSearchSubmit={handleSearchSubmit} />
         {isEmpty && (
-          <Heading title={"Nothing found, please enter a valid query!"} />
+          <Heading title={'Nothing found, please enter a valid query!'} />
         )}
         {photos.length > 0 && (
           <PhotosList photos={photos} handleOpenModal={handleOpenModal} />
@@ -91,7 +91,7 @@ const Photos = () => {
           </button>
         )}
         {isError && (
-          <Heading title={"Something went wrong, try again later!"} />
+          <Heading title={'Something went wrong, try again later!'} />
         )}
       </Container>
     </Section>
