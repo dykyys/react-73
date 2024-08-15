@@ -6,8 +6,8 @@ import Todos from './pages/Todos/Todos';
 // import Photos from './pages/Photos/Photos';
 import HomePage from './pages/HomePage/HomePage';
 import { Header } from './components';
-// import Countries from './pages/Countries/Countries';
-// import SearchCountries from './pages/SearchCountries/SearchCounties';
+import Countries from './pages/Countries/Countries';
+import SearchCountries from './pages/SearchCountries/SearchCounties';
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
         <Route path="/points" element={<Points />} />
         <Route path="/props" element={<Props />} />
         <Route path="/todos" element={<Todos />} />
-        {/* <Route path='/countries' element={<Countries />} /> */}
-        {/* <Route path='/searchCountries' element={<SearchCountries />} /> */}
-        {/* <Route path='*' element={<Navigate to='/' />} /> */}
+        <Route path="/countries" element={<Countries />} />
+        <Route path="/searchCountries" element={<SearchCountries />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
