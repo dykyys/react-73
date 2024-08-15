@@ -8,7 +8,7 @@ import {
   Heading,
   ImageModal,
 } from 'components';
-// import { fetchImages } from "services/pexelsAPI";
+import { fetchImages } from 'services/pexelsAPI';
 import css from './Photos.module.css';
 
 const Photos = () => {
