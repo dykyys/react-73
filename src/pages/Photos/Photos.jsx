@@ -8,7 +8,7 @@ import {
   Heading,
   ImageModal,
 } from 'components';
-// import { fetchImages } from 'services/pexelsAPI';
+import { fetchImages } from 'services/pexelsAPI';
 import css from './Photos.module.css';
 
 const Photos = () => {
@@ -27,13 +27,13 @@ const Photos = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // const res = await fetchImages(query, page);
-        // if (!res.photos.length) {
-        //   setIsEmpty(true);
-        //   return;
-        // }
-        // setPhotos((prev) => [...prev, ...res.photos]);
-        // setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
+        const res = await fetchImages(query, page);
+        if (!res.photos.length) {
+          setIsEmpty(true);
+          return;
+        }
+        setPhotos((prev) => [...prev, ...res.photos]);
+        setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
       } catch (error) {
         setIsError(true);
       } finally {
