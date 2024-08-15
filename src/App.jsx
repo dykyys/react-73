@@ -12,7 +12,7 @@
 function App() {
   return (
     <>
-      <h1>app</h1>
+      <h1>app with BrowserRouter </h1>
       {/* <Header />
 			<Routes>
 				<Route path='/' element={<HomePage />} />
