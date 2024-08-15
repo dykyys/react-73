@@ -5,11 +5,11 @@ const client = createClient(
 );
 
 export const fetchImages = async (query, page) => {
-  // return client.photos.search({
-  //   query,
-  //   per_page: 20,
-  //   orientation: "landscape",
-  //   color: "black",
-  //   page,
-  // });
+  return client.photos.search({
+    query,
+    per_page: 20,
+    orientation: 'landscape',
+    color: 'black',
+    page,
+  });
 };
