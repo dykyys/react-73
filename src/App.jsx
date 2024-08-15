@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 // import Points from './pages/Points/Points';
 // import Quize from './pages/Quize/Quize';
 // import Todos from './pages/Todos/Todos';
-// import Photos from './pages/Photos/Photos';
+import Photos from './pages/Photos/Photos';
 import HomePage from './pages/HomePage/HomePage';
 import { Header } from './components';
 // import Countries from './pages/Countries/Countries';
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path='/photos' element={<Photos />} /> */}
+        <Route path="/photos" element={<Photos />} />
         {/* <Route path='/quize' element={<Quize />} /> */}
         {/* <Route path='/points' element={<Points />} /> */}
         {/* <Route path='/props' element={<Props />} /> */}
