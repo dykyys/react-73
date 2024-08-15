@@ -12,7 +12,7 @@ import SearchCountries from './pages/SearchCountries/SearchCounties';
 function App() {
   return (
     <>
-      <h1>app with BrowserRouter and Header and Routes and HomePage</h1>
+      {/* <h1>app with BrowserRouter and Header and Routes and HomePage</h1> */}
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
