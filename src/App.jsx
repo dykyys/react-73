@@ -12,19 +12,19 @@ import { Header } from './components';
 function App() {
   return (
     <>
-      <h1>app with BrowserRouter and Header</h1>
+      <h1>app with BrowserRouter and Header and Routes and HomePage</h1>
       <Header />
-      {/* <Routes> */}
-      {/* <Route path='/' element={<HomePage />} /> */}
-      {/* <Route path='/photos' element={<Photos />} /> */}
-      {/* <Route path='/quize' element={<Quize />} /> */}
-      {/* <Route path='/points' element={<Points />} /> */}
-      {/* <Route path='/props' element={<Props />} /> */}
-      {/* <Route path='/todos' element={<Todos />} /> */}
-      {/* <Route path='/countries' element={<Countries />} /> */}
-      {/* <Route path='/searchCountries' element={<SearchCountries />} /> */}
-      {/* <Route path='*' element={<Navigate to='/' />} /> */}
-      {/* </Routes> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path='/photos' element={<Photos />} /> */}
+        {/* <Route path='/quize' element={<Quize />} /> */}
+        {/* <Route path='/points' element={<Points />} /> */}
+        {/* <Route path='/props' element={<Props />} /> */}
+        {/* <Route path='/todos' element={<Todos />} /> */}
+        {/* <Route path='/countries' element={<Countries />} /> */}
+        {/* <Route path='/searchCountries' element={<SearchCountries />} /> */}
+        {/* <Route path='*' element={<Navigate to='/' />} /> */}
+      </Routes>
     </>
   );
 }
