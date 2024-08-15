@@ -1,4 +1,4 @@
-// import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // import Props from './pages/Props/Props';
 // import Points from './pages/Points/Points';
 // import Quize from './pages/Quize/Quize';
