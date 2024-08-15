@@ -27,11 +27,11 @@ const Photos = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // const res = await fetchImages(query, page);
-        // if (!res.photos.length) {
-        //   setIsEmpty(true);
-        //   return;
-        // }
+        const res = await fetchImages(query, page);
+        if (!res.photos.length) {
+          setIsEmpty(true);
+          return;
+        }
         // setPhotos((prev) => [...prev, ...res.photos]);
         // setShowLoadMore(page < Math.ceil(res.total_results / res.per_page));
       } catch (error) {
