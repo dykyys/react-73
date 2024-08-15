@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 // import Quize from './pages/Quize/Quize';
 // import Todos from './pages/Todos/Todos';
 // import Photos from './pages/Photos/Photos';
-// import HomePage from './pages/HomePage/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import { Header } from './components';
 // import Countries from './pages/Countries/Countries';
 // import SearchCountries from './pages/SearchCountries/SearchCounties';
